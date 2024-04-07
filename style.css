@@ -2,162 +2,97 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f0f5f8; /* Softer light background */
-}
-
-header {
-  background-color: #282c34; /* Darker header */
-  color: #fff;
-  padding: 20px;
-  text-align: center;
 }
 
 aside {
-  background-color: #e8e8e8; /* Lighter aside background */
-  float: left;
-  width: 20%;
+  background-color: #007bff; /* blue */
+  color: #fff; /* white text */
+  width: 200px;
+  height: 100%;
   padding: 20px;
-  box-sizing: border-box;
-  transition: width 0.3s;
+  float: left;
 }
 
 aside h2 {
   margin-top: 0;
-  font-size: 1.5rem;
-  color: #333; /* Darker heading text for contrast */
 }
 
-aside ul {
+ul {
   list-style-type: none;
   padding: 0;
 }
 
-aside li {
+ul li {
   margin-bottom: 10px;
 }
 
-aside li a {
-  display: block;
-  padding: 10px;
-  background-color: #fff; /* White link background */
-  color: #282c34;  /* Match header color for links */
+ul li a {
   text-decoration: none;
+  color: #fff; /* white text */
+  display: block;
+  padding: 5px 10px;
   border-radius: 5px;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease;
 }
 
-aside li a:hover {
-  background-color: #e0e0e0; /* Subtle hover effect */
+ul li a:hover {
+  background-color: #0056b3; /* darker blue on hover */
 }
 
 main {
-  float: left;
-  width: 80%;
   padding: 20px;
-  box-sizing: border-box;
-  transition: width 0.3s;
+  overflow: hidden;
 }
 
-#result {
-  margin-top: 20px;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Media query for responsiveness */
-@media screen and (max-width: 768px) { 
-  aside, 
-  main {
-    width: 100%; 
-  }
-}
-
-/* Form Styles */
 #encryptionForm {
+  margin-bottom: 20px;
+  background-color: #f0f0f0; /* Light gray background */
   padding: 20px;
-  gap: 20px;
-  background-color: #f8f8f8; /* Subtle background for form */
   border-radius: 5px;
-}
-
-#encryptionForm h2 {
-  margin-top: 0;
-  color: #282c34; /* Same blue from header */
+  border: 1px solid #ddd; /* Light gray border */
 }
 
 #encryptionForm label {
   display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333; /* Dark text color */
 }
 
 #encryptionForm input[type="text"],
-#encryptionForm textarea {
-  width: calc(100% - 120px);
+#encryptionForm select {
+  width: 100%;
   padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc; /* Light gray border */
+  box-sizing: border-box;
   margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
 }
 
 #encryptionForm button {
-  padding: 10px 20px;
-  background-color: #343a40; /* Darker button color */
-  color: white;
+  background-color: #0056b3; /* Blue button */
+  color: #fff; /* White text color */
   border: none;
-  border-radius: 4px;
+  padding: 10px 20px;
+  border-radius: 5px;
   cursor: pointer;
-  margin-top: 10px;
+  transition: background-color 0.3s ease;
 }
 
 #encryptionForm button:hover {
-  background-color: #23272b; /* Darker on hover */
+  background-color: #ffd966; 
+  color: black;
 }
 
-/* ... textarea and readonly styles remain the same */
-/* ... (Your existing CSS styles) ... */
+/* #result {
+  border: 1px solid #ffa500;
+  background-color: #ffd966; 
+  padding: 10px;
+  border-radius: 5px;
+} */
 
-/* General Container Padding */
-header, aside, main, #encryptionForm, #result {
-  box-sizing: border-box; /* Include padding within the element's width */
+@media (max-width: 768px) {
+  aside {
+      width: 100%;
+      float: none;
+  }
 }
-
-/* Alignment */
-header h1 { 
-  text-align: center; /* Center the header text */ 
-}
-
-aside ul { 
-  text-align: center;  /* Center list items within the navigation */
-}
-
-#result {
-  text-align: center; /* Center the content within the result area */
-}
-
-/* Form Alignment and Padding */
-#encryptionForm {
-  padding: 20px;
-  display: flex; /* Use flexbox for flexible arrangement  */
-  flex-direction: column; /* Align items vertically */
-  align-items: center;  /* Center items horizontally */
-  gap: 20px;
-}
-
-#encryptionForm label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-  width: 100%; /* Label takes full width */
-  text-align: left; /* Align label text left */
-}
-
-#encryptionForm input[type="text"], 
-#encryptionForm textarea, 
-#encryptionForm button { 
-  width: 100%; /* Form elements take full width */
-} 
-
-/* ... (Rest of your CSS) ... */
